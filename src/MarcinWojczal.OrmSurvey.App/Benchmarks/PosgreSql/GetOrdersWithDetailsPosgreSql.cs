@@ -1,0 +1,28 @@
+﻿using BenchmarkDotNet.Attributes;
+
+namespace MarcinWojczal.OrmSurvey.App.Benchmarks.PosgreSql
+{
+    public class GetOrdersWithDetailsPosgreSql : BenchmarkBase
+    {
+        [Params(1, 10, 200, 600, 1000, 2500, 5000, 7500, 10000)]
+        public int NumberOfRecords { get; set; }
+
+        [Benchmark]
+        public void Dapper()
+        {
+            _dapperPostgreSql.SelectOrdersWithDetailsAndEmployee(NumberOfRecords);
+        }
+
+        [Benchmark]
+        public void EntityFramework()
+        {
+            _efPostgreSql.SelectOrdersWithDetailsAndEmployee(NumberOfRecords);
+        }
+
+        [Benchmark]
+        public void NHibernate()
+        {
+            _nHibernatePostgreSql.SelectOrdersWithDetailsAndEmployee(NumberOfRecords);
+        }
+    }
+}

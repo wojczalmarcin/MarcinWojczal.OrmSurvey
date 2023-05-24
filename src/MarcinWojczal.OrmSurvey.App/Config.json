@@ -1,0 +1,6 @@
+{
+  "DataBase": {
+    "SqlServerConnectionString": "Data Source=*;Initial Catalog=Northwind;Integrated Security=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;TrustServerCertificate=True",
+    "PostgreSqlConnectionString": ""
+  }
+}

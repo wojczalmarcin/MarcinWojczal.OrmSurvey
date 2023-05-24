@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NHibernate" Version="5.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MarcinWojczal.OrmSurvey.Core\MarcinWojczal.OrmSurvey.Core.csproj" />
+    <ProjectReference Include="..\MarcinWojczal.OrmSurvey.Models\MarcinWojczal.OrmSurvey.Models.csproj" />
+  </ItemGroup>
+
+</Project>
