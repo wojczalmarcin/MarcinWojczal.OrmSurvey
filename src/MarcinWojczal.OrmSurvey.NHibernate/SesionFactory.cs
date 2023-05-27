@@ -30,7 +30,6 @@ namespace MarcinWojczal.OrmSurvey.NHibernate
             mapper.AddMapping<SupplierMapping>();
             mapper.AddMapping<TerritoryMapping>();
             _configuration.AddMapping(mapper.CompileMappingForAllExplicitlyAddedEntities());
-            //_configuration.SetProperty("hibernate.default_fetch_mode", "select");
         }
 
         public void BuildSession()
